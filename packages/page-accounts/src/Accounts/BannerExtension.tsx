@@ -39,16 +39,8 @@ function BannerExtension (): React.ReactElement | null {
       }
 
       return (
-        <Banner type='warning'>
-          <p>
-            {upgradableCount === 1
-              ? t('You have 1 extension that needs to be updated with the latest chain properties in order to display the correct information for the chain you are connected to.')
-              : t('You have {{upgradableCount}} extensions that need to be updated with the latest chain properties in order to display the correct information for the chain you are connected to.', { replace: { upgradableCount } })
-            }
-            {t(' This update includes chain metadata and chain properties.')}
-          </p>
-          <p><Trans key='extensionUpgrade'>Visit your <a href='#/settings/metadata'>settings page</a> to apply the updates to the injected extensions.</Trans></p>
-        </Banner>
+      	<Banner type='warning'>
+      	</Banner>
       );
     }
 

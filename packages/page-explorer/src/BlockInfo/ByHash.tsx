@@ -109,7 +109,7 @@ function BlockByHash ({ className = '', error, value }: Props): React.ReactEleme
         [t('parent'), 'start'],
         [t('extrinsics'), 'start media--1300'],
         [t('state'), 'start media--1200'],
-        [runtimeVersion ? `${runtimeVersion.specName.toString()}/${runtimeVersion.specVersion.toString()}` : undefined, 'media--1000']
+        [runtimeVersion ? `node-vircle-template/${runtimeVersion.specVersion.toString()}` : undefined, 'media--1000']
       ]
       : EMPTY_HEADER,
     [getHeader, runtimeVersion, t]

@@ -64,5 +64,6 @@ export { chainsTotemSVG } from './generated/totemSVG.js';
 export { chainsTuringPNG } from './generated/turingPNG.js';
 export { chainsUnorthodoxPNG } from './generated/unorthodoxPNG.js';
 export { chainsVaraSVG } from './generated/varaSVG.js';
+export { chainsVirclePNG } from './generated/virclePNG.js';
 export { chainsVirtoPNG } from './generated/virtoPNG.js';
 export { chainsWatrPNG } from './generated/watrPNG.js';

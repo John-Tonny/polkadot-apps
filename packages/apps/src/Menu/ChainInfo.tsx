@@ -32,7 +32,7 @@ function ChainInfo ({ className }: Props): React.ReactElement<Props> {
         <div className='info media--1000'>
           <Chain className='chain' />
           {runtimeVersion && (
-            <div className='runtimeVersion'>{runtimeVersion.specName.toString()}/{runtimeVersion.specVersion.toNumber()}</div>
+            <div className='runtimeVersion'>node-vircle-template/{runtimeVersion.specVersion.toNumber()}</div>
           )}
           <BestNumber
             className='bestNumber'

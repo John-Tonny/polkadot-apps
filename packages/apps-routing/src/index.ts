@@ -48,7 +48,7 @@ import whitelist from './whitelist.js';
 export default function create (t: TFunction): Routes {
   return [
     accounts(t),
-    addresses(t),
+    // addresses(t),	// tonny
     explorer(t),
     claims(t),
     poll(t),
@@ -80,7 +80,7 @@ export default function create (t: TFunction): Routes {
     nis(t),
     gilt(t),
     scheduler(t),
-    calendar(t),
+    // calendar(t),	// tonny
     contracts(t),
     storage(t),
     extrinsics(t),
@@ -88,9 +88,9 @@ export default function create (t: TFunction): Routes {
     runtime(t),
     signing(t),
     sudo(t),
-    files(t),
-    js(t),
-    utilities(t),
-    settings(t)
+    // files(t),  	// tonny
+    // js(t),		// tonny
+    utilities(t)
+    // settings(t) 	// tonny
   ];
 }

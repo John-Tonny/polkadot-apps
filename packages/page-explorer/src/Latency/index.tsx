@@ -129,10 +129,10 @@ function Latency ({ className }: Props): React.ReactElement<Props> {
         times: [t('blocktime'), t('average')]
       },
       {
-        blocks: t('blocksize (last {{n}} blocks)', { replace: { n: maxItems } }),
-        events: t('events (last {{n}} blocks)', { replace: { n: maxItems } }),
-        extrinsics: t('extrinsics (last {{n}} blocks)', { replace: { n: maxItems } }),
-        times: t('blocktimes (last {{n}} blocks)', { replace: { n: maxItems } })
+        blocks: t('区块大小 (最近 {{n}} 块)', { replace: { n: maxItems } }),
+        events: t('事件数 (最近 {{n}} 块)', { replace: { n: maxItems } }),
+        extrinsics: t('交易数 (最近 {{n}} 块)', { replace: { n: maxItems } }),
+        times: t('区块时间 (最近 {{n}} 块)', { replace: { n: maxItems } })
       }
     ],
     [maxItems, t]

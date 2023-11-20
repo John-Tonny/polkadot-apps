@@ -60,7 +60,7 @@ function PaymentInfo ({ accountId, className = '', extrinsic, isHeader }: Props)
         isHeader={isHeader}
         summary={
           <Trans i18nKey='feesForSubmission'>
-            Fees of <span className='highlight'>{formatBalance(dispatchInfo.partialFee, { withSiFull: true })}</span> will be applied to the submission
+            手续费： <span className='highlight'>{formatBalance(dispatchInfo.partialFee, { withSiFull: true })}</span>
           </Trans>
         }
       />

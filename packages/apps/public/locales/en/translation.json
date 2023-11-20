@@ -1848,5 +1848,9 @@
   "{{type}} copied": "",
   "{{value}}x voting balance, locked for {{duration}}x duration{{period}}": "",
   "{{when}} (est.)": "",
-  "⚡️ Thunder Gateway": ""
+  "⚡️ Thunder Gateway": "",
+  "事件数 (最近 {{n}} 块)": "",
+  "交易数 (最近 {{n}} 块)": "",
+  "区块大小 (最近 {{n}} 块)": "",
+  "区块时间 (最近 {{n}} 块)": ""
 }
