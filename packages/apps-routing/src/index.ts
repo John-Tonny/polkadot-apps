@@ -90,7 +90,7 @@ export default function create (t: TFunction): Routes {
     sudo(t),
     // files(t),  	// tonny
     // js(t),		// tonny
+    // settings(t), 	// tonny
     utilities(t)
-    // settings(t) 	// tonny
   ];
 }
