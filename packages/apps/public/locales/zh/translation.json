@@ -251,6 +251,7 @@
   "Injected": "已插入",
   "It is recommended that you create/store your accounts securely and externally from the app. On {{yourBrowser}} the following browser extensions are available for use -": "强烈建议你在本应用的外部安全地创建/存储你的账户。在 {{yourBrowser}} 可使用下面的浏览器扩展 -",
   "Judge": "判断",
+  "Basic account injection and signer": "帐户创建和签名",
   "Keys from rotateKeys": "来自 rotateKeys 的密钥",
   "Known good": "已知良好",
   "Latency": "区块时间",
