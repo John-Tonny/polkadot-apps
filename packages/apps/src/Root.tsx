@@ -37,10 +37,10 @@ function createTheme ({ uiTheme }: { uiTheme: string }): ThemeDef {
 function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
   const [theme, setTheme] = useState(() => createTheme(settings));
 
-  const [logined, setLogined] = useState(false);
+  const [logined, setLogined] = useState(sessionStorage.getItem('login') == "登录");
   const [account, setAccount] = useState();
   const [password, setPassword] = useState();
-
+  
   const onFinish = (values: any) => {
     if(false){
       if (account == 'admin' && password == 'jlw@999000') {
@@ -58,6 +58,7 @@ function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
       axios.post('http://116.196.93.236:9090/api/auth/login', data)
       .then(response => {
         if(response.data.status == 200 && response.data  && response.data.status == 200 ){
+	  sessionStorage.setItem('login', "登录");
           setLogined(true);
         }else{
           alert(response.data.message);
