@@ -10,6 +10,8 @@ function getGenesis (name: string): HexString {
   const network = Object.entries(knownGenesis).find(([network]) => network === name);
 
   assert(network?.[1][0], `Unable to find genesisHash for ${name}`);
+  console.log(" ######## network ########");
+  console.log(network);
 
   return network[1][0];
 }

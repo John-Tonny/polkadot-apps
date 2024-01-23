@@ -66,8 +66,8 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
 
   const storageOptions = useMemo(
     () => [
-      { text: t('Allow local in-browser account storage'), value: 'on' },
-      { text: t('Do not allow local in-browser account storage'), value: 'off' }
+      { text: t('Allow local in-browser account storage'), value: 'off' },  //tonny
+      { text: t('Do not allow local in-browser account storage'), value: 'on' }
     ],
     [t]
   );

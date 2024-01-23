@@ -9,6 +9,7 @@ export default function create (t: TFunction): Route {
   return {
     Component,
     display: {
+      isHidden: true,
       needsAccounts: true,
       needsApi: []
     },

@@ -54,8 +54,8 @@ export default function create (t: TFunction): Routes {
     poll(t),
     transfer(t),
     teleport(t),
-    staking(t),
-    staking2(t),
+    staking(t),		
+    staking2(t),        
     collator(t),
     // governance v2
     referenda(t),
@@ -73,14 +73,14 @@ export default function create (t: TFunction): Routes {
     treasury(t),
     bounties(t),
     // others
-    parachains(t),
+    parachains(t),	// tonny
     assets(t),
     nfts(t),
     society(t),
     nis(t),
     gilt(t),
-    scheduler(t),
-    // calendar(t),	// tonny
+    scheduler(t),	// tonny
+    calendar(t),	// tonny
     contracts(t),
     storage(t),
     extrinsics(t),
@@ -88,9 +88,9 @@ export default function create (t: TFunction): Routes {
     runtime(t),
     signing(t),
     sudo(t),
-    // files(t),  	// tonny
-    // js(t),		// tonny
-    // settings(t), 	// tonny
+    files(t),  		// tonny
+    js(t),		// tonny
+    settings(t), 	// tonny
     utilities(t)
   ];
 }

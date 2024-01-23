@@ -120,5 +120,11 @@
     "@polkadot/x-textencoder": "^12.5.1",
     "@polkadot/x-ws": "^12.5.1",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "antd": "^5.13.2",
+    "axios": "^1.6.5",
+    "react-login-page": "^1.0.2"
   }
 }

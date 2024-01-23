@@ -37,26 +37,24 @@ function createItemsRef (t: (key: string, options?: { replace: Record<string, un
       name: 'query',
       text: t('Block details')
     },
-    /*  tonny
     {
+      isHidden: true,
       name: 'latency',
       text: t('Latency')
     },
-    */
     {
+      isHidden: true,
       name: 'forks',
       text: t('Forks')
     },
     {
       name: 'node',
       text: t('Node info')
-    /* tonny
     },
     {
-      // isHidden: true,
+      isHidden: true,
       name: 'api',
       text: t('API stats')
-    */
     }
   ];
 }

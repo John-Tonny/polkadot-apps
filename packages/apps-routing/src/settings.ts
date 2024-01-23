@@ -8,7 +8,9 @@ import Component, { useCounter } from '@polkadot/app-settings';
 export default function create (t: TFunction): Route {
   return {
     Component,
-    display: {},
+    display: {
+      isHidden: true
+    },
     group: 'settings',
     icon: 'cogs',
     name: 'settings',

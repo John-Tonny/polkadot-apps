@@ -9,6 +9,7 @@ export default function create (t: TFunction): Route {
   return {
     Component,
     display: {
+      isHidden: true,
       needsApi: [
         // children - parachainInfo.arachainId / parachainUpgrade.didSetValidationCode
         ['query.paras.parachains']

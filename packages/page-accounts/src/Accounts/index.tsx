@@ -144,7 +144,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
   );
 
   const canStoreAccounts = useMemo(
-    () => isElectron || (!isIpfs && settings.get().storage === 'on'),
+    () => isElectron || (!isIpfs && settings.get().storage === 'off'),
     [isElectron, isIpfs]
   );
 

@@ -20,7 +20,7 @@ function ChainInfo ({ className }: Props): React.ReactElement<Props> {
   const runtimeVersion = useCall<RuntimeVersion>(isApiReady && api.rpc.state.subscribeRuntimeVersion);
   const { ipnsChain } = useIpfs();
   const [isEndpointsVisible, toggleEndpoints] = useToggle();
-  const canToggle = !ipnsChain;
+  const canToggle = true; // !ipnsChain;
 
   return (
     <StyledDiv className={className}>
