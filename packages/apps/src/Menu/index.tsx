@@ -7,7 +7,7 @@ import type { AccountId } from '@polkadot/types/interfaces';
 import type { Group, Groups, ItemRoute } from './types.js';
 
 import React, { useMemo, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import createRoutes from '@polkadot/apps-routing';
 import { styled } from '@polkadot/react-components';
@@ -19,6 +19,9 @@ import ChainInfo from './ChainInfo.js';
 import Grouping from './Grouping.js';
 import Item from './Item.js';
 import NodeInfo from './NodeInfo.js';
+
+// import { Button } from 'antd';
+import { Button } from '@polkadot/react-components';
 
 interface Props {
   className?: string;
@@ -96,6 +99,13 @@ function Menu ({ className = '' }: Props): React.ReactElement<Props> {
   const sudoKey = useCall<AccountId>(apiProps.isApiReady && apiProps.api.query.sudo?.key);
   const location = useLocation();
 
+  const account = sessionStorage.getItem('login') + "    ";
+  if(account == null){
+    window.location.reload();
+  }
+
+  const navigate = useNavigate();
+
   const externalRef = useRef(createExternals(t));
   const routeRef = useRef(createRoutes(t));
 
@@ -125,6 +135,12 @@ function Menu ({ className = '' }: Props): React.ReactElement<Props> {
     [location]
   );
 
+  const onLogout = () => {
+    sessionStorage.removeItem('login');
+    // navigate('/');
+    window.location.reload();
+  }
+
   return (
     <StyledDiv className={`${className}${(!apiProps.isApiReady || !apiProps.isApiConnected) ? ' isLoading' : ''} highlight--bg`}>
       <div className='menuContainer'>
@@ -153,6 +169,10 @@ function Menu ({ className = '' }: Props): React.ReactElement<Props> {
             ))}
           </ul>
         </div>
+	<div className="ant-text">
+         {account} 
+         <Button label={'退出'} onClick={onLogout} />
+	</div>
       </div>
     </StyledDiv>
   );
@@ -166,6 +186,10 @@ const StyledDiv = styled.div`
 
   .smallShow {
     display: none;
+  }
+  
+  .ant-text {
+    color: #ffffff;
   }
 
   & .menuContainer {

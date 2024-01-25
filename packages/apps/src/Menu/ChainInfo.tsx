@@ -20,25 +20,14 @@ function ChainInfo ({ className }: Props): React.ReactElement<Props> {
   const runtimeVersion = useCall<RuntimeVersion>(isApiReady && api.rpc.state.subscribeRuntimeVersion);
   const { ipnsChain } = useIpfs();
   const [isEndpointsVisible, toggleEndpoints] = useToggle();
-  const canToggle = true; // !ipnsChain;
+  const canToggle = false; // !ipnsChain;
 
   return (
     <StyledDiv className={className}>
       <div
         className={`apps--SideBar-logo-inner${canToggle ? ' isClickable' : ''} highlight--color-contrast`}
-        onClick={toggleEndpoints}
       >
         <ChainImg />
-        <div className='info media--1000'>
-          <Chain className='chain' />
-          {runtimeVersion && (
-            <div className='runtimeVersion'>node-vircle-template/{runtimeVersion.specVersion.toNumber()}</div>
-          )}
-          <BestNumber
-            className='bestNumber'
-            label='#'
-          />
-        </div>
         {canToggle && (
           <Icon
             className='dropdown'

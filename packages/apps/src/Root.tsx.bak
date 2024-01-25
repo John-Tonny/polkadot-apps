@@ -109,7 +109,7 @@ function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
 				    <fieldset className="login-contain">
        				      <div className="container">
                                         <div className="centered-div">
-					  <Image width={100} src={chainsTtPNG} preview={false} />
+					  <Image width={100} src={chainsTtPNG} />
                                           <p></p>
                                           <h>维公区块链运维管理</h>
                                         </div>
@@ -143,7 +143,7 @@ function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
                                         </Form.Item>
 
                                         <Form.Item>
-					  <Button type="primary" style={{backgroundColor:'#00a87a'}} htmlType="submit" className="login-form-button">
+					  <Button type="primary" htmlType="submit" className="login-form-button">
                                             登录
                                           </Button>
                                         </Form.Item>
